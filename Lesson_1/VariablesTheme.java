@@ -12,10 +12,11 @@ public class VariablesTheme {
         double serviceLife = 6.2;
         char os = 'W';
         boolean my = true;
-        System.out.println("Представляю вам: " + name + "\n" + "И он действительно мой: " + my + "\n" + "Его характеристики: " 
-                + "\n" + "Количество ядер: " + core + "\n" + "Емкость HDD: " + hdd + "\n" + "Емкость HDD в байтах: " + bytes + "\n" 
-                + "Количество папок на HDD: " + countFolder + "\n" + "Количество файлов во всех папках: " + countFile + "\n" + "ОС: "
-                + os + "\n" + "Срок службы устройства: " + serviceLife + " года");
+        System.out.println("Представляю вам: " + name + "\n" + "И он действительно мой: " + my + "\n"
+                + "Его характеристики: " + "\n" + "Количество ядер: " + core + "\n" + "Емкость HDD: " + hdd
+                + "\n" + "Емкость HDD в байтах: " + bytes + "\n" + "Количество папок на HDD: " + countFolder
+                + "\n" + "Количество файлов во всех папках: " + countFile + "\n" + "ОС: " + os + "\n"
+                + "Срок службы устройства: " + serviceLife + " года");
 
         System.out.println("");
         System.out.println("\t" + "ЗАДАНИЕ № 2 \nРасчет стоимости товара со скидкой\n");
@@ -29,8 +30,8 @@ public class VariablesTheme {
 
         System.out.println("");
         System.out.println("\t" + "ЗАДАНИЕ 3 \nВывод на консоль слова JAVA\n");
-        System.out.println("   J    a  v     v  a" + "\n"  + "   J   a a  v   v  a a" + "\n" + "J  J  aaaaa  V V  aaaaa" + "\n"
-                +" JJ  a     a  V  a     a");
+        System.out.println("   J    a  v     v  a" + "\n"  + "   J   a a  v   v  a a" + 
+                "\n" + "J  J  aaaaa  V V  aaaaa" + "\n" +" JJ  a     a  V  a     a");
 
         System.out.println("");
         System.out.println("\t" + "ЗАДАНИЕ 4 \nОтображение min и max значений числовых типов данных\n");
@@ -38,14 +39,14 @@ public class VariablesTheme {
         short sortMax = 32767;
         int intMax = 2147483647;
         long longMax = 9223372036854775807L;
-        System.out.println("byte первоначальное значение: " + byteMax + "\nЗначение после инкремента: " + (++byteMax)
-                + "\nЗначение после декремента: " + (--byteMax));
-        System.out.println("\n" + "short первоначальное значение: " + sortMax + "\nЗначение после инкремента: " + (++sortMax)
-                + "\nЗначение после декремента: " + (--sortMax));
-        System.out.println("\n" + "int первоначальное значение: " + intMax + "\nЗначение после инкремента: " + (++intMax)
-                + "\nЗначение после декремента: " + (--intMax));
-        System.out.println("\n" + "long первоначальное значение: " + longMax + "\nЗначение после инкремента: " + (++longMax)
-                + "\nЗначение после декремента: " + (--longMax));
+        System.out.println("byte первоначальное значение: " + byteMax + "\nЗначение после инкремента: "
+                + (++byteMax) + "\nЗначение после декремента: " + (--byteMax));
+        System.out.println("\n" + "short первоначальное значение: " + sortMax + 
+            "\nЗначение после инкремента: " + (++sortMax) + "\nЗначение после декремента: " + (--sortMax));
+        System.out.println("\n" + "int первоначальное значение: " + intMax + "\nЗначение после инкремента: "
+                + (++intMax) + "\nЗначение после декремента: " + (--intMax));
+        System.out.println("\n" + "long первоначальное значение: " + longMax + "\nЗначение после инкремента: "
+                + (++longMax) + "\nЗначение после декремента: " + (--longMax));
 
         System.out.println("");
         System.out.println("\t" + "ЗАДАНИЕ 5 \nПерестановка значений переменных\n");
@@ -77,10 +78,11 @@ public class VariablesTheme {
         int codeChar3 = 64;
         int codeChar4 = 94;
         int codeChar5 = 95;
-        System.out.println("код символа: " + codeChar1 + " символ данного кода: " + (char) codeChar1 + "\nкод символа: " + codeChar2
-                + " символ данного кода: " + (char) codeChar2 + "\nкод символа: " + codeChar3 + " символ данного кода: " + (char) codeChar3
-                + "\nкод символа: " + codeChar4 + " символ данного кода: " + (char) codeChar4 + "\nкод символа: " + codeChar5 
-                + " символ данного кода: " + (char) codeChar5);
+        System.out.println("код символа: " + codeChar1 + " символ данного кода: " + (char) codeChar1
+                + "\nкод символа: " + codeChar2 + " символ данного кода: " + (char) codeChar2
+                + "\nкод символа: " + codeChar3 + " символ данного кода: " + (char) codeChar3
+                + "\nкод символа: " + codeChar4 + " символ данного кода: " + (char) codeChar4
+                + "\nкод символа: " + codeChar5 + " символ данного кода: " + (char) codeChar5);
 
         System.out.println("");
         System.out.println("\t" + "ЗАДАНИЕ 7 \nПроизведение и сумма цифр числа\n");
@@ -88,8 +90,8 @@ public class VariablesTheme {
         int digit1 = srcNum / 100;
         int digit2 = srcNum / 10 % 10;
         int digit3 = srcNum % 10;
-        System.out.println("Сумма цифр числа " + srcNum + " = " + (digit1 + digit2 + digit3) + "\nПроизведение цифр числа " 
-                + srcNum + " = " + (digit1 * digit2 * digit3));
+        System.out.println("Сумма цифр числа " + srcNum + " = " + (digit1 + digit2 + digit3) 
+                + "\nПроизведение цифр числа " + srcNum + " = " + (digit1 * digit2 * digit3));
 
         System.out.println("");
         System.out.println("\t" + "ЗАДАНИЕ 8 \nВывод на консоль ASCII-арт Дюка\n");
@@ -101,10 +103,10 @@ public class VariablesTheme {
         char underlining = '_';
         System.out.println("\n"+ space + space + space + space + space + slash + backslash
                 + "\n"+ space + space + space + space + slash + space + space + backslash
-                + "\n"+ space + space + space + slash + underlining + leftBracket + space + rightBracket + backslash
-                + "\n" + space + space + slash + space + space + space + space + space + space + backslash
-                + "\n" + space + slash + underlining + underlining + underlining + underlining + slash
-                + backslash + underlining + underlining + backslash);
+                + "\n"+ space + space + space + slash + underlining + leftBracket + space + rightBracket
+                + backslash + "\n" + space + space + slash + space + space + space + space + space + space
+                + backslash + "\n" + space + slash + underlining + underlining + underlining + underlining
+                + slash + backslash + underlining + underlining + backslash);
 
         System.out.println("");
         System.out.println("\t" + "ЗАДАНИЕ 9 \nОтображение количества сотен, десятков и единиц числа\n");
@@ -112,7 +114,8 @@ public class VariablesTheme {
         int digit4 = srcNum / 100;
         int digit5 = srcNum / 10 % 10;
         int digit6 = srcNum % 10;
-        System.out.println("Число " + srcNum + " содержит: \n" + digit4 + " сотен\n" + digit5 + " десятков\n" + digit6 + " единиц");
+        System.out.println("Число " + srcNum + " содержит: \n" + digit4 + " сотен\n" + digit5 + " десятков\n"
+                + digit6 + " единиц");
 
         System.out.println("");
         System.out.println("\t" + "ЗАДАНИЕ 10 \nПреобразование секунд\n");
