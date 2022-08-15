@@ -104,15 +104,15 @@ public class IfElseStatementTheme {
         System.out.println("\t" + "ЗАДАНИЕ 5 \nОпределение буквы, числа или символа по их коду\n");
         char symbol = '\u0057';
         System.out.println("Символ кода: " + symbol);
-        if (symbol >= 65  & symbol <= 90) {
+        if (symbol >= 'A'  & symbol <= 'Z') {
             System.out.println("Заглавная буква");
-        } else if (symbol >= 97  & symbol <= 122) {
+        } else if (symbol >= 'a'  & symbol <= 'z') {
             System.out.println("Прописная буква");
-        } else if (symbol >= 48  & symbol <= 57) {
+        } else if (symbol >= '0'  & symbol <= '9') {
             System.out.println("Цифра");
-        } else if ((symbol >= 0 & symbol <= 31) || (symbol >= 32 & symbol <= 42)
-                || (symbol >= 58  & symbol <= 64) || (symbol >= 91  & symbol <= 96)
-                || (symbol >= 123  & symbol <= 1000)) {
+        } else if ((symbol >= '0' & symbol <= '▼') || (symbol >= ' ' & symbol <= '/')
+                || (symbol >= ':'  & symbol <= '@') || (symbol >= '['  & symbol <= '`')
+                || (symbol >= '{'  & symbol <= '⌂')) {
             System.out.println("Не является цифрой и буквой");
         } else {
             System.out.println("Такого символа не существует");
