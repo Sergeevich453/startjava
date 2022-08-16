@@ -61,11 +61,11 @@ public class IfElseStatementTheme {
 
         System.out.println("\n\t" + "ЗАДАНИЕ 4 \nПоиск одинаковых цифр в числах\n");
         num1 = 658;
-        num2 = 608;
-        String category = "";
-        String categoryNumHundred = "";
-        String categoryNumTen = "";
-        String categoryNumOne = "";
+        num2 = 103;
+        String noRegister = "";
+        int hundredsRegister = 0;
+        int tensRegister = 0;
+        int onesRegister = 0;
         int hundred1 = num1 / 100;
         int ten1 = num1 / 10 % 10;
         int one1 = num1 % 10;
@@ -76,23 +76,23 @@ public class IfElseStatementTheme {
                 + " " + ten2 + " " + one2);
         System.out.print("Одинаковые в них цифры: ");
         if (hundred1 == hundred2) {
-            categoryNumHundred = "1; ";
+            hundredsRegister = 1;
             System.out.print(hundred2 + "; ");
         }
         if (ten1 == ten2) {
-            categoryNumTen = "2; ";
+            tensRegister = 2;
             System.out.print(ten2 + "; ");
         }
         if (one1 == one2) {
-            categoryNumOne = "3; ";
+            onesRegister = 3;
             System.out.print(one2 + "; ");
         }
-        if ((hundred1 != hundred2) & (ten1 != ten2) & (one1 != one2)) {
-            category = "совпадений нет";
-            System.out.print("совпадений нет ");
+        if ((hundred1 != hundred2) && (ten1 != ten2) && (one1 != one2)) {
+            noRegister = "совпадений нет";
+            System.out.print(noRegister);
         }
-        System.out.println("\nРегистры совпавших чисел: " + categoryNumHundred + categoryNumTen
-                + categoryNumOne + category);
+        System.out.println("\nРегистры совпавших чисел: " + hundredsRegister + " " + tensRegister + " "
+                + onesRegister + " " + noRegister);
 
         System.out.println("\n\n\t" + "ЗАДАНИЕ 5 \nОпределение буквы, числа или символа по их коду\n");
         char someSymbol = '\u0057';
@@ -117,9 +117,10 @@ public class IfElseStatementTheme {
         } else if (deposit > 300000) {
             percent = 10.8;
         }
+        double accruedInterest = (percent / 100)*deposit;
         System.out.println("Сумма вклада: " + deposit + "\nСумма начисления " + percent
-                + "% процентов, составляет: " + (float) ((percent/100)*deposit) + "\nИтоговая сумма: "
-                + (deposit + ((percent/100)*deposit)));
+                + "% процентов, составляет: " + (float) accruedInterest + "\nИтоговая сумма: "
+                + (deposit + accruedInterest));
 
         System.out.println("\n\t" + "ЗАДАНИЕ 7 \nОпределение оценки по предметам\n");
         int historyPercent = 86;
@@ -149,18 +150,19 @@ public class IfElseStatementTheme {
             System.out.println("Процент введен некорректно");
         }
         System.out.println(historyPoints + " - Оценка по истории; " + "\n" + programmingPoints
-                + " - Оценка по программированию;" + "\n" + (( historyPoints + programmingPoints ) / 2)
+                + " - Оценка по программированию;" + "\n" + ((historyPoints + programmingPoints) / 2)
                 + " - Средний балл оценок по предметам;" + "\n" + ((historyPercent + programmingPercent) / 2)
                 + " - Средний процент по предметам;");
 
         System.out.println("\n\t" + "ЗАДАНИЕ 8 \nРасчет прибыли\n");
         int rent = 5000;
         int costPrice = 9000;
-        int income = 23000;
-        if ((income - (costPrice + rent)) > 0) {
-            System.out.println("Прибыль за год: +" + (income - (costPrice + rent)));
+        int income = 3000;
+        int profitYear = (income - (costPrice + rent))*12;
+        if (profitYear > 0) {
+            System.out.println("Прибыль за год: +" + profitYear);
         } else {
-            System.out.println("Прибыль за год: " + (income - (costPrice + rent)));
+            System.out.println("Прибыль за год: " + profitYear);
         }
 
         System.out.println("\n\t" + "ЗАДАНИЕ 9 \nПодсчет количества банкнот\n");
