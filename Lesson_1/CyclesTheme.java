@@ -1,19 +1,20 @@
 public class CyclesTheme {
+    
     public static void main(String[] args) {
         System.out.println("\n\t" + "ЗАДАНИЕ 1 \nПодсчет суммы четных и нечетных чисел\n");
         int counter = -10;
-        int sum = 0;
-        int sum1 = 0;
+        int sumEven = 0;
+        int sumOdd = 0;
         do {
             if (counter % 2 == 0) {
-                sum += counter;
+                sumEven += counter;
             } else {
-                sum1 += counter;
+                sumOdd += counter;
             }
             counter++;
         } while (counter <= 21);
-        System.out.println("В промежутке [-10, 21] сумма четных чисел = " + sum
-                + ", а сумма нечетных чисел = " + sum1);
+        System.out.println("В промежутке [-10, 21] сумма четных чисел = " + sumEven
+                + ", а сумма нечетных чисел = " + sumOdd);
 
         System.out.println("\n\t" + "ЗАДАНИЕ 2 \nВывод чисел в интервале (min и max) в порядке убывания\n");
         int num1 = 10;
@@ -41,7 +42,7 @@ public class CyclesTheme {
 
         System.out.println("\n\t" + "ЗАДАНИЕ 3 \nВывод реверсивного числа и суммы его цифр\n");
         int num = 1234;
-        sum = 0;
+        int sum = 0;
         while (num > 0) {
             int digit = num % 10;
             System.out.print(digit);
@@ -90,6 +91,7 @@ public class CyclesTheme {
                 System.out.println();
             }
         }
+        System.out.println();
         int countSymbols = 10;
         while (countSymbols >= 1) {
             int countLines = 1;
@@ -100,6 +102,7 @@ public class CyclesTheme {
             System.out.println();
             countSymbols--; 
         }
+        System.out.println();
         int repeats = 3;
         int countLines = -repeats + 1;
         do {
@@ -117,17 +120,17 @@ public class CyclesTheme {
         } while (countLines <= repeats - 1);
 
         System.out.println("\n\t" + "ЗАДАНИЕ 7 \nОтображение ASCII-символов\n");
-        for (int i = 0; i <= 47; i++) {
-            if (((int) i) % 2 != 0) {
-                System.out.printf("%6s%6s", i, ((char) i));
-                System.out.println();
+        System.out.printf("%7s%7s%n%n", "Dec", "Char");
+        for (char i = 0; i <= 47; i++) {
+            if ( i % 2 != 0) {
+                System.out.printf("%6d%6c%n", ((int) i), i);
             }
         }
         System.out.println();
-        for (int i = 97; i <= 122; i++) {
-            if (((int) i) % 2 == 0) {
-                System.out.printf("%6s%6s",  i, ((char) i));
-                System.out.println();
+        System.out.printf("%7s%7s%n%n", "Dec", "Char");
+        for (char i = 97; i <= 122; i++) {
+            if ( i % 2 == 0) {
+                System.out.printf("%6d%6c%n", ((int)i), i);
             }
         }
 
@@ -138,7 +141,7 @@ public class CyclesTheme {
         while (num > 0) {
             int digit = num % 10;
             reverseNum = reverseNum * 10 + digit;
-            num = num / 10;
+            num /= 10;
         }
         if (copyNum == reverseNum) {
             System.out.println("Число является палиндромом " + "\nЗаданное число: " + copyNum
@@ -150,33 +153,22 @@ public class CyclesTheme {
 
         System.out.println("\n\t" + "ЗАДАНИЕ 9 \nОпределение, является ли число счастливым\n");
         num = 657576;
-        reverseNum = 0;
         sum = 0;
-        count = 0;
-        int reverseNum1 = 0;
-        int digit1 = 0;
-        sum1 = 0;
-        int count1 = 0;
-        while (count <= 2) {
-            int digit = num % 10;
-            reverseNum = reverseNum * 10 + digit;
-            sum = sum + digit;
-            num = num / 10;
-            count++;
-        }
-        while (count1 <= 2) {
-            digit1 = num % 10;
-            reverseNum1 = reverseNum1 * 10 + digit1;
-            sum1 = sum1 + digit1;
-            num = num / 10;
-            count1++;
+        int sum1 = 0;
+        for ( int i = 0; i <= 5; i++) {
+            if (i <= 2) {
+                int digit = num % 10;
+                sum += digit;
+            } else {
+                int digit = num % 10;
+                sum1 += digit;
+            }
+            num /= 10;
         }
         if (sum == sum1) {
-            System.out.println("Сумма цифр sum = sum1: " + sum + " = " + sum1
-                    + "\nЧисло является счастливым");
+            System.out.println("Сумма цифр sum = sum1: " + sum + " = " + sum1 + "\nЧисло является счастливым");
         } else {
-            System.out.println("Сумма цифр sum != sum1: " + sum + " = " + sum1
-                    + "\nЧисло неявляется счастливым");
+            System.out.println("Сумма цифр sum != sum1: " + sum + " = " + sum1 + "\nЧисло неявляется счастливым");
         }
 
         System.out.println("\n\t" + "ЗАДАНИЕ 10 \nВывод таблицы умножения Пифагора\n");
