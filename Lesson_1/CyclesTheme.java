@@ -16,31 +16,31 @@ public class CyclesTheme {
         System.out.println("В промежутке [-10, 21] сумма четных чисел = " + sumEven
                 + ", а сумма нечетных чисел = " + sumOdd);
 
-        System.out.println("\n\t" + "ЗАДАНИЕ 2 \nВывод чисел в интервале (min и max) в порядке убывания\n");
+        System.out.println("\t" + "ЗАДАНИЕ 2 \nВывод чисел в интервале (min и max) в порядке убывания\n");
         int num1 = 10;
         int num2 = 5;
         int num3 = -1;
         int max = 0;
         int min = 0;
-        if (num1 > num2 && num1 > num3) {
-            max = --num1;
-        } else if (num2 > num3 && num2 > num1) {
-            max = --num2;
+        if (num2 < num1 && num1 > num3) {
+            max = num1;
+        } else if (num3 < num2 && num2 > num1) {
+            max = num2;
         } else {
-            max = --num3;
+            max = num3;
         }
-        if (num1 < num2 && num1 < num3) {
-            min = ++num1;
-        } else if (num2 < num1 && num2 < num3) {
-            min = ++num2;
+        if (num2 > num1 && num1 < num3) {
+            min = num1;
+        } else if (num1 > num2 && num2 < num3) {
+            min = num2;
         } else {
-            min = ++num3;
+            min = num3;
         }
-        for (int i = max; i >= min; i--) {
+        for (int i = max - 1; i >= min + 1; i--) {
             System.out.print(" " + i);
         }
 
-        System.out.println("\n\t" + "ЗАДАНИЕ 3 \nВывод реверсивного числа и суммы его цифр\n");
+        System.out.println("\n" + "\n\t" + "ЗАДАНИЕ 3 \nВывод реверсивного числа и суммы его цифр\n");
         int num = 1234;
         int sum = 0;
         while (num > 0) {
@@ -65,7 +65,7 @@ public class CyclesTheme {
             count++;
         }
 
-        System.out.println("\n\t" + "ЗАДАНИЕ 5 \nПроверка количества единиц на четность\n");
+        System.out.println("\n" + "\n\t" + "ЗАДАНИЕ 5 \nПроверка количества единиц на четность\n");
         num = 3141591;
         int copyNum = num;
         int countOnes = 0;
@@ -91,6 +91,7 @@ public class CyclesTheme {
                 System.out.println();
             }
         }
+
         System.out.println();
         int countSymbols = 10;
         while (countSymbols >= 1) {
@@ -102,6 +103,7 @@ public class CyclesTheme {
             System.out.println();
             countSymbols--; 
         }
+
         System.out.println();
         int repeats = 3;
         int countLines = -repeats + 1;
@@ -123,11 +125,9 @@ public class CyclesTheme {
         System.out.printf("%7s%7s%n%n", "Dec", "Char");
         for (char i = 0; i <= 47; i++) {
             if ( i % 2 != 0) {
-                System.out.printf("%6d%6c%n", ((int) i), i);
+                System.out.printf("%6d%6c%n", (int) i, i);
             }
         }
-        System.out.println();
-        System.out.printf("%7s%7s%n%n", "Dec", "Char");
         for (char i = 97; i <= 122; i++) {
             if ( i % 2 == 0) {
                 System.out.printf("%6d%6c%n", ((int)i), i);
@@ -155,12 +155,11 @@ public class CyclesTheme {
         num = 657576;
         sum = 0;
         int sum1 = 0;
-        for ( int i = 0; i <= 5; i++) {
+        int digit = num % 10;
+        for (int i = 0; i <= 5; i++) {
             if (i <= 2) {
-                int digit = num % 10;
                 sum += digit;
             } else {
-                int digit = num % 10;
                 sum1 += digit;
             }
             num /= 10;
