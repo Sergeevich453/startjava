@@ -156,6 +156,7 @@ public class CyclesTheme {
         sum = 0;
         int sum1 = 0;
         int digit = num % 10;
+
         for (int i = 0; i <= 5; i++) {
             if (i <= 2) {
                 sum += digit;
