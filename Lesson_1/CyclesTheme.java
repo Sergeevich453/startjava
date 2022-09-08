@@ -152,23 +152,29 @@ public class CyclesTheme {
         }
 
         System.out.println("\n\t" + "ЗАДАНИЕ 9 \nОпределение, является ли число счастливым\n");
-        num = 657576;
+        num = 46;
+        counter = num;
         sum = 0;
         int sum1 = 0;
-        int digit = num % 10;
-
-        for (int i = 0; i <= 5; i++) {
-            if (i <= 2) {
-                sum += digit;
-            } else {
-                sum1 += digit;
-            }
+        count = 0;
+        while (counter != 0) {
+            counter /= 10;
+            count++;
+        }
+        for ( int i = 0; i < (count / 2) && num > 0 ; i++) {
+            sum += num % 10;
+            num /= 10;
+        }
+        for ( int i = 0; i < (count / 2) && num > 0 ; i++) {
+            sum1 += num % 10;
             num /= 10;
         }
         if (sum == sum1) {
-            System.out.println("Сумма цифр sum = sum1: " + sum + " = " + sum1 + "\nЧисло является счастливым");
+            System.out.println("Сумма цифр sum = sum1: " + sum + " = " + sum1 
+                    + "\nЧисло является счастливым");
         } else {
-            System.out.println("Сумма цифр sum != sum1: " + sum + " = " + sum1 + "\nЧисло неявляется счастливым");
+            System.out.println("Сумма цифр sum != sum1: " + sum + " = " + sum1 
+                    + "\nЧисло неявляется счастливым");
         }
 
         System.out.println("\n\t" + "ЗАДАНИЕ 10 \nВывод таблицы умножения Пифагора\n");
