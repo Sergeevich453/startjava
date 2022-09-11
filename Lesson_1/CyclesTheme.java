@@ -106,7 +106,7 @@ public class CyclesTheme {
 
         System.out.println();
         countSymbols = 5;
-        countLines = 0;
+        int countLines = 0;
         do {
             if (countSymbols < 3) {
                 countLines = countSymbols;
@@ -180,12 +180,23 @@ public class CyclesTheme {
         System.out.println("\n\t" + "ЗАДАНИЕ 10 \nВывод таблицы умножения Пифагора\n");
         System.out.print("\tТАБЛИЦА ПИФАГОРА " + "\n   ");
         for (int i = 2; i <= 9; i++) {
-            System.out.printf("%3d", i);
+            if(i == 2) {
+                System.out.printf("%1s%3d", (char) 124, i);
+            } else {
+                System.out.printf("%3d", i);
+            }
         }
         System.out.println();
         for (int i = 2; i < 10; i++) {
+            if(i == 2) {
+                System.out.println("  --------------------------");
+            }
             for(int j = 1; j < 10; j++) {
+                if(j == 1) {
+                System.out.printf("%3d%1s", i * j, (char) 124);
+            } else {
                 System.out.printf("%3d", i * j);
+            }
             }
             System.out.println();
         }
