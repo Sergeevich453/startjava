@@ -105,21 +105,21 @@ public class CyclesTheme {
         }
 
         System.out.println();
-        int repeats = 3;
-        int countLines = -repeats + 1;
+        countSymbols = 5;
+        countLines = 0;
         do {
-            countSymbols = 1;
-            int countRepeats = countLines;
-            if (countRepeats < 0) {
-                countRepeats = -countRepeats;
+            if (countSymbols < 3) {
+                countLines = countSymbols;
+            } else {
+                countLines = 6 - countSymbols;
             }
             do {
                 System.out.print("*");
-                ++countSymbols;
-            } while (countSymbols <= repeats - countRepeats);
-                ++countLines;
-                System.out.println();
-        } while (countLines <= repeats - 1);
+                countLines--;
+            } while (countLines > 0);
+            System.out.println();
+            countSymbols--; 
+        } while (countSymbols > 0);
 
         System.out.println("\n\t" + "ЗАДАНИЕ 7 \nОтображение ASCII-символов\n");
         System.out.printf("%7s%7s%n%n", "Dec", "Char");
