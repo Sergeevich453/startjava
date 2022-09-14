@@ -36,20 +36,20 @@ public class CyclesTheme {
         } else {
             min = num3;
         }
-        for (int i = max - 1; i >= min + 1; i--) {
+        for (int i = max - 1; i > min; i--) {
             System.out.print(" " + i);
         }
 
         System.out.println("\n" + "\n\t" + "ЗАДАНИЕ 3 \nВывод реверсивного числа и суммы его цифр\n");
         int num = 1234;
-        int sum = 0;
+        int sumDigits = 0;
         while (num > 0) {
             int digit = num % 10;
             System.out.print(digit);
-            sum += digit;
+            sumDigits += digit;
             num /= 10;
         }
-        System.out.println("\nСумма чисел = " + sum);
+        System.out.println("\nСумма чисел = " + sumDigits);
 
         System.out.println("\n\t" + "ЗАДАНИЕ 4 \nВывод чисел на консоль в несколько строк\n");
         int count = 0;
@@ -124,13 +124,13 @@ public class CyclesTheme {
         System.out.println("\n\t" + "ЗАДАНИЕ 7 \nОтображение ASCII-символов\n");
         System.out.printf("%7s%7s%n%n", "Dec", "Char");
         for (char i = 0; i <= 47; i++) {
-            if ( i % 2 != 0) {
+            if (i % 2 != 0) {
                 System.out.printf("%6d%6c%n", (int) i, i);
             }
         }
         for (char i = 97; i <= 122; i++) {
-            if ( i % 2 == 0) {
-                System.out.printf("%6d%6c%n", ((int)i), i);
+            if (i % 2 == 0) {
+                System.out.printf("%6d%6c%n", ((int) i), i);
             }
         }
 
@@ -152,28 +152,26 @@ public class CyclesTheme {
         }
 
         System.out.println("\n\t" + "ЗАДАНИЕ 9 \nОпределение, является ли число счастливым\n");
-        num = 46;
-        counter = num;
-        sum = 0;
-        int sum1 = 0;
+        num = 4664;
+        copyNum = num;
+        int digit = 0;
+        int digitNum = 0;
         count = 0;
-        while (counter != 0) {
-            counter /= 10;
+        while (copyNum != 0) {
+            copyNum /= 10;
             count++;
         }
-        for ( int i = 0; i < (count / 2) && num > 0 ; i++) {
-            sum += num % 10;
+        for ( int i = 0; i < (count / 2) && num > 0; i++) {
+            digit += num % 10;
+            num /= 10;
+            digitNum += num % 10;
             num /= 10;
         }
-        for ( int i = 0; i < (count / 2) && num > 0 ; i++) {
-            sum1 += num % 10;
-            num /= 10;
-        }
-        if (sum == sum1) {
-            System.out.println("Сумма цифр sum = sum1: " + sum + " = " + sum1 
+        if (digit == digitNum) {
+            System.out.println("Сумма цифр digit = digitNum: " + digit + " = " + digitNum 
                     + "\nЧисло является счастливым");
         } else {
-            System.out.println("Сумма цифр sum != sum1: " + sum + " = " + sum1 
+            System.out.println("Сумма цифр digit != digitNum: " + digit + " = " + digitNum 
                     + "\nЧисло неявляется счастливым");
         }
 
@@ -186,10 +184,9 @@ public class CyclesTheme {
                 System.out.printf("%3d", i);
             }
         }
-        System.out.println();
         for (int i = 2; i < 10; i++) {
             if(i == 2) {
-                System.out.println("  --------------------------");
+                System.out.println("\n  --------------------------");
             }
             for(int j = 1; j < 10; j++) {
                 if(j == 1) {
