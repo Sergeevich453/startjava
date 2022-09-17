@@ -16,29 +16,25 @@ public class CyclesTheme {
         System.out.println("В промежутке [-10, 21] сумма четных чисел = " + sumEven
                 + ", а сумма нечетных чисел = " + sumOdd);
 
-        System.out.println("\t" + "ЗАДАНИЕ 2 \nВывод чисел в интервале (min и max) в порядке убывания\n");
+        System.out.println("\n\t" + "ЗАДАНИЕ 2 \nВывод чисел в интервале (min и max) в порядке убывания\n");
         int num1 = 10;
         int num2 = 5;
         int num3 = -1;
-        int max = 0;
-        int min = 0;
-        if (num1 > num2) {
-            max = --num1;
-        } else {
-            max = --num2;
+        int max = num2;
+        int min = num1;
+        if (num1 > max) {
+            max = num1;
         }
-        if (max < num3) {
-            max = --num3;
+        if (num3 > max) {
+            max = num3;
         }
-        if (num1 < num2) {
-            min = ++num1;
-        } else {
-            min = ++num2;
+        if (num2 < min) {
+            min = num2;
         }
-        if (min > num3) {
-            min = ++num3;
+        if (num3 < min) {
+            min = num3;
         }
-        for (int i = max; i >= min; i--) {
+        for (int i = (max - 1); i >= (min + 1); i--) {
             System.out.print(" " + i);
         }
 
@@ -195,9 +191,9 @@ public class CyclesTheme {
             for (int j = 1; j < 10; j++) {
                 if (j == 1) {
                     System.out.printf("%3d%3s", i * j, (char) 124);
-            } else {
-                System.out.printf("%3d", i * j);
-            }
+                } else {
+                    System.out.printf("%3d", i * j);
+                }
             }
             System.out.println();
         }
