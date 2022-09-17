@@ -22,21 +22,23 @@ public class CyclesTheme {
         int num3 = -1;
         int max = 0;
         int min = 0;
-        if (num2 < num1 && num1 > num3) {
-            max = num1;
-        } else if (num3 < num2 && num2 > num1) {
-            max = num2;
+        if (num1 > num2) {
+            max = --num1;
         } else {
-            max = num3;
+            max = --num2;
         }
-        if (num2 > num1 && num1 < num3) {
-            min = num1;
-        } else if (num1 > num2 && num2 < num3) {
-            min = num2;
+        if (max < num3) {
+            max = --num3;
+        }
+        if (num1 < num2) {
+            min = ++num1;
         } else {
-            min = num3;
+            min = ++num2;
         }
-        for (int i = max - 1; i > min; i--) {
+        if (min > num3) {
+            min = ++num3;
+        }
+        for (int i = max; i >= min; i--) {
             System.out.print(" " + i);
         }
 
@@ -154,43 +156,45 @@ public class CyclesTheme {
         System.out.println("\n\t" + "ЗАДАНИЕ 9 \nОпределение, является ли число счастливым\n");
         num = 4664;
         copyNum = num;
-        int digit = 0;
-        int digitNum = 0;
+        sumDigits = 0;
+        int sumDigits1 = 0;
         count = 0;
         while (copyNum != 0) {
             copyNum /= 10;
             count++;
         }
-        for ( int i = 0; i < (count / 2) && num > 0; i++) {
-            digit += num % 10;
-            num /= 10;
-            digitNum += num % 10;
+        for (int i = 1; i < (count + 1); i++) {
+            if (i <= (count / 2)) { 
+                sumDigits += num % 10;
+            } else {
+                sumDigits1 += num % 10;
+                }
             num /= 10;
         }
-        if (digit == digitNum) {
-            System.out.println("Сумма цифр digit = digitNum: " + digit + " = " + digitNum 
+        if (sumDigits == sumDigits1) {
+            System.out.println("Сумма цифр sumDigits = sumDigits1: " + sumDigits + " = " + sumDigits1 
                     + "\nЧисло является счастливым");
         } else {
-            System.out.println("Сумма цифр digit != digitNum: " + digit + " = " + digitNum 
-                    + "\nЧисло неявляется счастливым");
+            System.out.println("Сумма цифр sumDigits != sumDigits1: " + sumDigits + " = " + sumDigits1 
+                    + "\nЧисло не является счастливым");
         }
 
         System.out.println("\n\t" + "ЗАДАНИЕ 10 \nВывод таблицы умножения Пифагора\n");
         System.out.print("\tТАБЛИЦА ПИФАГОРА " + "\n   ");
         for (int i = 2; i <= 9; i++) {
-            if(i == 2) {
-                System.out.printf("%1s%3d", (char) 124, i);
+            if (i == 2) {
+                System.out.printf("%3s%3d", (char) 124, i);
             } else {
                 System.out.printf("%3d", i);
             }
         }
         for (int i = 2; i < 10; i++) {
-            if(i == 2) {
-                System.out.println("\n  --------------------------");
+            if (i == 2) {
+                System.out.println("\n  ----------------------------");
             }
-            for(int j = 1; j < 10; j++) {
-                if(j == 1) {
-                System.out.printf("%3d%1s", i * j, (char) 124);
+            for (int j = 1; j < 10; j++) {
+                if (j == 1) {
+                    System.out.printf("%3d%3s", i * j, (char) 124);
             } else {
                 System.out.printf("%3d", i * j);
             }
