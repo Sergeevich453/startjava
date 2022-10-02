@@ -34,7 +34,7 @@ public class CyclesTheme {
         if (num3 < min) {
             min = num3;
         }
-        for (int i = (max - 1); i >= (min + 1); i--) {
+        for (int i = --max; i > min; i--) {
             System.out.print(" " + i);
         }
 
