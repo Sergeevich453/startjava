@@ -1,7 +1,7 @@
 public class WolfTest {
     
     public static void main(String[] agrs) {
-        Wolf grey = new Wolf("Men", "Grey", 50, 5, "Grey");
+        Wolf grey = new Wolf("Мужской", "Серый", 50, 5, "Серый");
         grey.setGender("Женский");
         grey.setNickname("Желтый");
         grey.setWeight(50);
