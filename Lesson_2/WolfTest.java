@@ -1,15 +1,13 @@
 public class WolfTest {
     
     public static void main(String[] agrs) {
-        Wolf grey = new Wolf();
-        grey.gender = "Мужской";
-        grey.nickname = "Серый";
-        grey.weight = 50;
-        grey.age = 5;
-        grey.color = "Серый";
-        System.out.println("Кличка волка: " + grey.nickname + "\nПол: " + grey.gender + "\nВес: " 
-                + grey.weight + "\nВозраст: " + grey.age + "\nЦвет: " + grey.color + "\n" + grey.walk()
-                + "\n" + grey.sit() + "\n" + grey.run() + "\n" + grey.howl() + "\nВолк охотится: " 
-                + grey.hunting());
+        Wolf grey = new Wolf("Men", "Grey", 50, 5, "Grey");
+        grey.setGender("Женский");
+        grey.setNickname("Желтый");
+        grey.setWeight(50);
+        grey.setAge(9);
+        grey.setColor("Черный");
+        System.out.println("Кличка волка: " + grey.getNickname() + "\nПол: " + grey.getGender() + "\nВес: " 
+                 + grey.getWeight() + "\nВозраст: " + grey.getAge() + "\nОкрас: " + grey.getColor());
     }
 }
