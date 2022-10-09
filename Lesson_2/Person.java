@@ -18,10 +18,6 @@ public class Person {
         System.out.println("Я бегу!");
     }
 
-    void sit() {
-        System.out.println("Я сел!");
-    }
-
     String speak() {
         return "Я говорю";
     }
