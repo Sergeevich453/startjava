@@ -1,6 +1,6 @@
 public class MyFirstGame {
     public static void main(String [] args){
-        int computerNum = 1;
+        int computerNum = 99;
         int playerNum = 100;
         int count = 0;
         while (playerNum != computerNum) {
@@ -9,7 +9,7 @@ public class MyFirstGame {
                 playerNum = playerNum / 2;
             } else if (playerNum < computerNum) {
                 System.out.println("Загаданное число больше = " + playerNum + " < " + computerNum); 
-                playerNum = playerNum + 1;
+                playerNum++;
             }
             count++;
         }
