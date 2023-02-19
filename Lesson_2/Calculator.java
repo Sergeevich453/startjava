@@ -1,35 +1,27 @@
 public class Calculator {
     
-    public double calculator(char sign, double num1, double num2) {
+    public double calculate(double num1, char sign, double num2) {
         double result = 1;
         switch(sign) {
             case '+':
-                result = num1 + num2;
-                break;
+                return num1 + num2;
             case '-':
-                result = num1 - num2;
-                break;
+                return num1 - num2;
             case '*':
-                result = num1 * num2;
-                break;
+                return num1 * num2;
             case '/':
-                result = num1 / num2;
-                break;
+                return num1 / num2;
             case '^':
                 for(int i = 1; i <= num2; i++) {
                     result *= num1;
                 }
                 break;
             case '%':
-                result = num1 % num2;
-                break;
+                return num1 % num2;
             default: 
                 System.out.println("Вы ввели некорректное значение повторите попытку.");
-                break;
         }
-        return result;
     }
-
 }
 
 
