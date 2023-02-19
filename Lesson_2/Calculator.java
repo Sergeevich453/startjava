@@ -13,9 +13,8 @@ public class Calculator {
                 return num1 / num2;
             case '^':
                 for(int i = 1; i <= num2; i++) {
-                    result *= num1;
+                     return num1 * num1;
                 }
-                break;
             case '%':
                 return num1 % num2;
             default: 
