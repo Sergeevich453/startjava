@@ -8,11 +8,11 @@ public class CalculatorTest {
         String answer;
         do {
             System.out.println("Введите первую цифру: ");
-            int num1 = scan.nextInt();
+            double num1 = scan.nextInt();
             System.out.println("Введите арифметический знак: ");
             char sign = scan.next().charAt(0);
             System.out.println("Введите вторую цифру: ");
-            int num2 = scan.nextInt();
+            double num2 = scan.nextInt();
             System.out.println("Ответ: " + calculator.calculate(num1, sign, num2));
             do {
                 System.out.println("\nЖелаете продолжить: [yes / no]");
