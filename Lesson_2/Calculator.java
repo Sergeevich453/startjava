@@ -1,7 +1,6 @@
 public class Calculator {
-    
+
     public double calculate(double num1, char sign, double num2) {
-        double result = 1;
         switch(sign) {
             case '+':
                 return num1 + num2;
@@ -12,16 +11,17 @@ public class Calculator {
             case '/':
                 return num1 / num2;
             case '^':
-                 for(int i = 1; i <= num2; i++) {
-                      result *= num1;
-                 }
-                 return result;
+                double result = 1;
+                for(int i = 1; i <= num2; i++) {
+                    result *= num1;
+                }
+                return result;
             case '%':
                 return num1 % num2;
             default: 
                 System.out.println("Вы ввели некорректное значение повторите попытку.");
         }
-        return result;
+        return 0;
     }
 }
 
