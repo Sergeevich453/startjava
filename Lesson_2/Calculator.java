@@ -1,6 +1,6 @@
 public class Calculator {
 
-    public double calculate(double num1, char sign, double num2) {
+    public int calculate(int num1, char sign, int num2) {
         switch(sign) {
             case '+':
                 return num1 + num2;
@@ -11,7 +11,7 @@ public class Calculator {
             case '/':
                 return num1 / num2;
             case '^':
-                double result = 1;
+                int result = 1;
                 for(int i = 1; i <= num2; i++) {
                     result *= num1;
                 }
