@@ -1,4 +1,4 @@
-import java.util.Scanner;
+    import java.util.Scanner;
 
 public class GuessNumber {
 
@@ -9,15 +9,15 @@ public class GuessNumber {
         while (true) {
             System.out.println(name1 + " Ведите свое число:");
             int number = console.nextInt();
-            if (number > secretNumber) {
-                System.out.println("Число: " + number + " игрока: " + name1
-                        + " больше загаданного компьютером");
+            if (number == secretNumber) {
+                System.out.println(name1 + " Выиграл!!!");
+                break;
             } else if (number < secretNumber) {
                 System.out.println("Число: " + number + " игрока: " + name1
                         + " меньше загаданного компьютером");
-            } else if (number == secretNumber) {
-                System.out.println(name1 + " Выиграл!!!");
-                break;
+            } else if (number > secretNumber) {
+                System.out.println("Число: " + number + " игрока: " + name1
+                        + " больше загаданного компьютером");
             }
 
             System.out.println(name2 + " Ведите свое число:");

@@ -19,7 +19,7 @@ public class Calculator {
             case '%':
                 return num1 % num2;
             default: 
-                System.out.println("Вы ввели некорректное значение повторите попытку.");
+                System.out.println("Вы ввели некорректное значение. Повторите попытку.");
         }
         return 0;
     }
