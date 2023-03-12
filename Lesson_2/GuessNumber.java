@@ -19,7 +19,8 @@ public class GuessNumber {
             if (number == secretNumber) {
                 System.out.println(player1.getName() + " - Выиграл!!!");
                 break;
-            } else if (number < secretNumber) {
+            }
+            if (number < secretNumber) {
                 System.out.println("Число: " + number + " игрока: " + player1.getName()
                         + " меньше загаданного компьютером");
             } else {
@@ -32,7 +33,8 @@ public class GuessNumber {
             if (number == secretNumber) {
                 System.out.println(player2.getName() + " - Выиграл!!!");
                 break;
-            } else if (number < secretNumber) {
+            }
+            if (number < secretNumber) {
                 System.out.println("Число: " + number + " игрока: " + player2.getName()
                         + " меньше загаданного компьютером");
             } else {
