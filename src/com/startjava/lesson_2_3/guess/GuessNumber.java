@@ -1,4 +1,6 @@
-    import java.util.Scanner;
+package src.com.startjava.lesson_2_3.guess;
+
+import java.util.Scanner;
 
 public class GuessNumber {
 
