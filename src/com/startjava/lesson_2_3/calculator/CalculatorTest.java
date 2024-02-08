@@ -1,4 +1,7 @@
-package src.com.startjava.lesson_2_3.calculator;
+//package calculator;
+//package src.com.startjava.lesson_2_3.calculator;
+package com.startjava.lesson_2_3.calculator;
+
 
 import java.util.Scanner;
 
@@ -9,7 +12,7 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         String answer;
         do {
-            System.out.println("Введите первую цифру: ");
+            System.out.println("Enter your number: ");
             int num1 = scan.nextInt();
             System.out.println("Введите арифметический знак: ");
             char sign = scan.next().charAt(0);
