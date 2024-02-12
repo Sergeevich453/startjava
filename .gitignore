@@ -2,5 +2,6 @@
 /out
 /Новая папка
 /.idea
-
+.project
+.classpath
 /bin/
