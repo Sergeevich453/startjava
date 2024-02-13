@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class RpsGameFormatting {
 	
 	private static final String ROCK = "R";
-    private static final String SCISSORS = "S";
+    private static final String SCISSORS = "s";
     private static final String PAPER = "P";           
 
     private  static String inputName(Scanner console) {
