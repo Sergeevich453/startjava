@@ -4,6 +4,14 @@ import java.util.Arrays;
 
 public class ArrayTheme {
 	
+	public static void main(String[] args) {		
+		revers();
+		composition();
+		deleting();
+		alfabetOutput();
+		fillingArr();
+ 	}
+	
 	private static void revers() {
 		System.out.println("\n\t" + "ЗАДАНИЕ 1 \nРеверс значений массива\n");
 		int[] nums = {7, 6, 2, 3, 5, 4, 1};
@@ -107,13 +115,5 @@ public class ArrayTheme {
         for (int i = 0; i < array.length; i++) {
             System.out.print(i % 10 == 0 ? "\n" : array[i] + " ");
         }
-	}
-	
-	public static void main(String[] args) {		
-		revers();
-		composition();
-		deleting();
-		alfabetOutput();
-		fillingArr();
- 	}
+	}	
 }
